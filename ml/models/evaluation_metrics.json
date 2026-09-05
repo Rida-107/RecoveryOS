@@ -1,0 +1,425 @@
+{
+  "evaluation": {
+    "dataset": "RecoveryOS synthetic payment batch",
+    "total_payments": 1000,
+    "simulation_note": "Expected recovery values are synthetic simulation estimates. They are not production recovery results or causal estimates."
+  },
+  "revenue": {
+    "total_revenue_at_risk": 24930675.3,
+    "baseline_expected_recovery": 10459810.44,
+    "recoveryos_expected_recovery": 14658094.07,
+    "baseline_expected_recovery_rate": 0.4196,
+    "recoveryos_expected_recovery_rate": 0.588,
+    "expected_recovery_uplift_percent": 40.14
+  },
+  "agent_operations": {
+    "automated_actions": 873,
+    "human_reviews": 127,
+    "automation_rate": 0.873,
+    "human_review_rate": 0.127
+  },
+  "policy": {
+    "payments_with_policy_blocks": 700,
+    "payment_policy_block_rate": 0.7,
+    "total_blocked_candidates": 747,
+    "total_candidates": 3000,
+    "candidate_policy_block_rate": 0.249
+  },
+  "model": {
+    "average_recovery_probability": 0.4285
+  },
+  "action_distribution": {
+    "PAYMENT_LINK": 685,
+    "DELAYED_RETRY": 188,
+    "HUMAN_REVIEW": 127
+  },
+  "failure_distribution": {
+    "CARD_EXPIRED": 97,
+    "INSUFFICIENT_FUNDS": 124,
+    "NETWORK_ERROR": 104,
+    "EXPIRED_CARD": 130,
+    "GATEWAY_TIMEOUT": 109,
+    "AUTH_FAILED": 101,
+    "BANK_DECLINED": 94,
+    "LIMIT_EXCEEDED": 141,
+    "BANK_TIMEOUT": 100
+  },
+  "failure_action_distribution": {
+    "CARD_EXPIRED": {
+      "PAYMENT_LINK": 97
+    },
+    "INSUFFICIENT_FUNDS": {
+      "PAYMENT_LINK": 119,
+      "HUMAN_REVIEW": 5
+    },
+    "NETWORK_ERROR": {
+      "DELAYED_RETRY": 66,
+      "PAYMENT_LINK": 38
+    },
+    "EXPIRED_CARD": {
+      "PAYMENT_LINK": 130
+    },
+    "GATEWAY_TIMEOUT": {
+      "HUMAN_REVIEW": 16,
+      "PAYMENT_LINK": 29,
+      "DELAYED_RETRY": 64
+    },
+    "AUTH_FAILED": {
+      "HUMAN_REVIEW": 101
+    },
+    "BANK_DECLINED": {
+      "PAYMENT_LINK": 94
+    },
+    "LIMIT_EXCEEDED": {
+      "PAYMENT_LINK": 138,
+      "HUMAN_REVIEW": 3
+    },
+    "BANK_TIMEOUT": {
+      "DELAYED_RETRY": 58,
+      "PAYMENT_LINK": 40,
+      "HUMAN_REVIEW": 2
+    }
+  },
+  "top_recovery_opportunities": [
+    {
+      "payment_id": "pay_00025",
+      "amount": 49964.27,
+      "failure_code": "NETWORK_ERROR",
+      "base_probability": 0.8831,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.95,
+        "PAYMENT_LINK": 0.9331,
+        "HUMAN_REVIEW": 0.8831
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.95,
+      "expected_recovery_value": 47466.06,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00435",
+      "amount": 49175.98,
+      "failure_code": "GATEWAY_TIMEOUT",
+      "base_probability": 0.7876,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.9376,
+        "PAYMENT_LINK": 0.8376,
+        "HUMAN_REVIEW": 0.7876
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.9376,
+      "expected_recovery_value": 46107.4,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00981",
+      "amount": 49138.49,
+      "failure_code": "BANK_TIMEOUT",
+      "base_probability": 0.7699,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.9199,
+        "PAYMENT_LINK": 0.8199,
+        "HUMAN_REVIEW": 0.7699
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.9199,
+      "expected_recovery_value": 45202.5,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00023",
+      "amount": 49211.43,
+      "failure_code": "BANK_TIMEOUT",
+      "base_probability": 0.7967,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8967,
+        "PAYMENT_LINK": 0.7967,
+        "HUMAN_REVIEW": 0.7967
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.8967,
+      "expected_recovery_value": 44127.89,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00393",
+      "amount": 49334.69,
+      "failure_code": "BANK_TIMEOUT",
+      "base_probability": 0.7232,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8732,
+        "PAYMENT_LINK": 0.7732,
+        "HUMAN_REVIEW": 0.7232
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.8732,
+      "expected_recovery_value": 43079.05,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00665",
+      "amount": 48241.68,
+      "failure_code": "BANK_TIMEOUT",
+      "base_probability": 0.7912,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8912,
+        "PAYMENT_LINK": 0.7912,
+        "HUMAN_REVIEW": 0.7912
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.8912,
+      "expected_recovery_value": 42992.99,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00709",
+      "amount": 48012.75,
+      "failure_code": "NETWORK_ERROR",
+      "base_probability": 0.7404,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8904,
+        "PAYMENT_LINK": 0.8404,
+        "HUMAN_REVIEW": 0.7904
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.8904,
+      "expected_recovery_value": 42750.55,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00448",
+      "amount": 46349.21,
+      "failure_code": "BANK_DECLINED",
+      "base_probability": 0.685,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.735,
+        "PAYMENT_LINK": 0.915,
+        "HUMAN_REVIEW": 0.685
+      },
+      "selected_action": "PAYMENT_LINK",
+      "selected_probability": 0.915,
+      "expected_recovery_value": 42409.53,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00976",
+      "amount": 46734.76,
+      "failure_code": "BANK_TIMEOUT",
+      "base_probability": 0.7916,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8916,
+        "PAYMENT_LINK": 0.7916,
+        "HUMAN_REVIEW": 0.7916
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.8916,
+      "expected_recovery_value": 41668.71,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00169",
+      "amount": 43691.91,
+      "failure_code": "BANK_DECLINED",
+      "base_probability": 0.7879,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8379,
+        "PAYMENT_LINK": 0.95,
+        "HUMAN_REVIEW": 0.7879
+      },
+      "selected_action": "PAYMENT_LINK",
+      "selected_probability": 0.95,
+      "expected_recovery_value": 41507.31,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00549",
+      "amount": 46310.94,
+      "failure_code": "NETWORK_ERROR",
+      "base_probability": 0.7407,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8907,
+        "PAYMENT_LINK": 0.7907,
+        "HUMAN_REVIEW": 0.7407
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.8907,
+      "expected_recovery_value": 41249.15,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00120",
+      "amount": 48560.45,
+      "failure_code": "AUTH_FAILED",
+      "base_probability": 0.7492,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.7992,
+        "PAYMENT_LINK": 0.7992,
+        "HUMAN_REVIEW": 0.8492
+      },
+      "selected_action": "HUMAN_REVIEW",
+      "selected_probability": 0.8492,
+      "expected_recovery_value": 41237.53,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Human escalation is always permitted."
+    },
+    {
+      "payment_id": "pay_00140",
+      "amount": 43115.87,
+      "failure_code": "BANK_DECLINED",
+      "base_probability": 0.7561,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8061,
+        "PAYMENT_LINK": 0.95,
+        "HUMAN_REVIEW": 0.7561
+      },
+      "selected_action": "PAYMENT_LINK",
+      "selected_probability": 0.95,
+      "expected_recovery_value": 40960.08,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00518",
+      "amount": 46120.0,
+      "failure_code": "CARD_EXPIRED",
+      "base_probability": 0.6879,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.6879,
+        "PAYMENT_LINK": 0.8679,
+        "HUMAN_REVIEW": 0.6879
+      },
+      "selected_action": "PAYMENT_LINK",
+      "selected_probability": 0.8679,
+      "expected_recovery_value": 40027.55,
+      "blocked_candidate_count": 1,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00950",
+      "amount": 42107.49,
+      "failure_code": "NETWORK_ERROR",
+      "base_probability": 0.8549,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.95,
+        "PAYMENT_LINK": 0.8549,
+        "HUMAN_REVIEW": 0.8549
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.95,
+      "expected_recovery_value": 40002.12,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00250",
+      "amount": 44490.35,
+      "failure_code": "EXPIRED_CARD",
+      "base_probability": 0.6593,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.7093,
+        "PAYMENT_LINK": 0.8893,
+        "HUMAN_REVIEW": 0.6593
+      },
+      "selected_action": "PAYMENT_LINK",
+      "selected_probability": 0.8893,
+      "expected_recovery_value": 39565.27,
+      "blocked_candidate_count": 1,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00027",
+      "amount": 47874.42,
+      "failure_code": "GATEWAY_TIMEOUT",
+      "base_probability": 0.726,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.826,
+        "PAYMENT_LINK": 0.726,
+        "HUMAN_REVIEW": 0.726
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.826,
+      "expected_recovery_value": 39544.27,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00151",
+      "amount": 45913.25,
+      "failure_code": "BANK_DECLINED",
+      "base_probability": 0.6803,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.6803,
+        "PAYMENT_LINK": 0.8603,
+        "HUMAN_REVIEW": 0.6803
+      },
+      "selected_action": "PAYMENT_LINK",
+      "selected_probability": 0.8603,
+      "expected_recovery_value": 39499.17,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00405",
+      "amount": 45362.63,
+      "failure_code": "GATEWAY_TIMEOUT",
+      "base_probability": 0.7196,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8696,
+        "PAYMENT_LINK": 0.7696,
+        "HUMAN_REVIEW": 0.7196
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.8696,
+      "expected_recovery_value": 39447.34,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    },
+    {
+      "payment_id": "pay_00538",
+      "amount": 46902.42,
+      "failure_code": "BANK_TIMEOUT",
+      "base_probability": 0.6886,
+      "action_probabilities": {
+        "DELAYED_RETRY": 0.8386,
+        "PAYMENT_LINK": 0.7386,
+        "HUMAN_REVIEW": 0.6886
+      },
+      "selected_action": "DELAYED_RETRY",
+      "selected_probability": 0.8386,
+      "expected_recovery_value": 39332.37,
+      "blocked_candidate_count": 0,
+      "candidate_count": 3,
+      "decision_reason": "Action permitted by policy."
+    }
+  ]
+}

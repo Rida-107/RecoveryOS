@@ -1,0 +1,4 @@
+{
+  "status": "MVP heuristic",
+  "next_phase": "train calibrated recovery-probability model on labeled synthetic outcomes"
+}

@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        RecoveryOS — AI Revenue Recovery
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css?v=20260904"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                R
+            </div>
+
+            <div>
+
+                <div class="brand-text">
+                    RecoveryOS
+                </div>
+
+                <div class="brand-subtitle">
+                    AI Revenue Recovery
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-label">
+            Revenue Operations
+        </div>
+
+
+        <nav class="nav">
+
+            <button
+                class="nav-btn active"
+                data-page="overview"
+                type="button"
+            >
+                ⌂ Overview
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page="opportunities"
+                type="button"
+            >
+                ◇ Recovery Opportunities
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page="agent"
+                type="button"
+            >
+                ✦ Agent Console
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page="audit"
+                type="button"
+            >
+                ▤ Audit Trail
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <span>
+                    RecoveryOS Online
+                </span>
+
+            </div>
+
+
+            <div
+                style="
+                    color:#8d98a8;
+                    font-size:10px;
+                    margin-top:8px;
+                "
+            >
+                v1.1.0
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN AREA
+         ===================================================== -->
+
+    <main class="main-area">
+
+
+        <!-- =================================================
+             TOP BAR
+             ================================================= -->
+
+        <header class="topbar">
+
+            <div class="page-heading">
+
+                <h1 id="page-title">
+                    Recovery Overview
+                </h1>
+
+                <p id="page-subtitle">
+                    AI-powered revenue recovery performance
+                </p>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="live-pill">
+
+                    <span class="live-dot"></span>
+
+                    Live
+
+                </div>
+
+
+                <button
+                    id="refresh-btn"
+                    class="secondary-btn"
+                    type="button"
+                >
+                    ↻ Refresh
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <div class="page">
+
+
+            <!-- =================================================
+                 OVERVIEW
+                 ================================================= -->
+
+            <section
+                id="page-overview"
+                class="page-section active"
+            >
+
+                <div class="section-header">
+
+                    <h2>
+                        Revenue Operations
+                    </h2>
+
+                    <p>
+                        AI-driven decisions for failed payments
+                    </p>
+
+                </div>
+
+
+
+                <!-- KPI GRID -->
+
+                <div class="kpi-grid">
+
+
+                    <!-- Revenue at Risk -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-label">
+                            Revenue at Risk
+                        </div>
+
+                        <div
+                            id="revenue-at-risk"
+                            class="kpi-value"
+                        >
+                            —
+                        </div>
+
+                        <div class="kpi-meta">
+                            Failed payment value
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Simulated Revenue Recovered -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-label">
+                            Simulated Revenue Recovered
+                        </div>
+
+                        <div
+                            id="revenue-recovered"
+                            class="kpi-value kpi-positive"
+                        >
+                            —
+                        </div>
+
+                        <div class="kpi-meta">
+                            RecoveryOS benchmark
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Recovery Rate -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-label">
+                            Recovery Rate
+                        </div>
+
+                        <div
+                            id="recovery-rate"
+                            class="kpi-value"
+                        >
+                            —
+                        </div>
+
+                        <div class="kpi-meta">
+                            Revenue recovery
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Uplift -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-label">
+                            vs Baseline
+                        </div>
+
+                        <div
+                            id="revenue-uplift"
+                            class="kpi-value kpi-positive"
+                        >
+                            —
+                        </div>
+
+                        <div class="kpi-meta">
+                            Simulated revenue uplift
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Automation -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-label">
+                            Automation Rate
+                        </div>
+
+                        <div
+                            id="automation-rate"
+                            class="kpi-value"
+                        >
+                            —
+                        </div>
+
+                        <div class="kpi-meta">
+                            Decisions automated
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Human Review -->
+
+                    <div class="kpi-card">
+
+                        <div class="kpi-label">
+                            Human Review
+                        </div>
+
+                        <div
+                            id="human-review"
+                            class="kpi-value kpi-warning"
+                        >
+                            —
+                        </div>
+
+                        <div class="kpi-meta">
+                            Safety escalations
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PERFORMANCE + ACTION DISTRIBUTION
+                     ================================================= -->
+
+                <div class="panel-grid">
+
+
+                    <!-- Recovery Performance -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <div class="panel-title">
+                                    Recovery Performance
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    Baseline vs RecoveryOS
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="panel-body">
+
+
+                            <div class="performance-row">
+
+                                <div class="performance-top">
+
+                                    <span class="performance-name">
+                                        Baseline
+                                    </span>
+
+                                    <span
+                                        id="baseline-rate"
+                                        class="performance-value"
+                                    >
+                                        —
+                                    </span>
+
+                                </div>
+
+
+                                <div class="progress-track">
+
+                                    <div
+                                        id="baseline-bar"
+                                        class="progress-fill"
+                                        style="width:0%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="performance-row">
+
+                                <div class="performance-top">
+
+                                    <span class="performance-name">
+                                        RecoveryOS
+                                    </span>
+
+                                    <span
+                                        id="recoveryos-rate"
+                                        class="performance-value text-success"
+                                    >
+                                        —
+                                    </span>
+
+                                </div>
+
+
+                                <div class="progress-track">
+
+                                    <div
+                                        id="recoveryos-bar"
+                                        class="progress-fill success"
+                                        style="width:0%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Action Distribution -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <div class="panel-title">
+                                    Recovery Strategy
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    Selected actions across failed payments
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="action-distribution"
+                            class="panel-body action-list"
+                        >
+
+                            <div class="loading">
+
+                                <span class="spinner"></span>
+
+                                Loading...
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TOP OPPORTUNITIES
+                     ================================================= -->
+
+                <div class="panel table-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <div class="panel-title">
+                                Highest-Value Recovery Opportunities
+                            </div>
+
+                            <div class="panel-subtitle">
+                                Failed payments ranked by potential recovery value
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="secondary-btn"
+                            type="button"
+                            onclick="showPage('opportunities')"
+                        >
+                            View All
+                        </button>
+
+                    </div>
+
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Payment
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Failure
+                                    </th>
+
+                                    <th>
+                                        Probability
+                                    </th>
+
+                                    <th>
+                                        Expected Value
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="opportunity-preview">
+
+                                <tr>
+
+                                    <td
+                                        colspan="6"
+                                        class="empty-state"
+                                    >
+                                        Loading opportunities...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RECOVERY OPPORTUNITIES
+                 ================================================= -->
+
+            <section
+                id="page-opportunities"
+                class="page-section"
+            >
+
+                <div class="section-header">
+
+                    <h2>
+                        Recovery Opportunities
+                    </h2>
+
+                    <p>
+                        Failed payments ranked by estimated recovery value
+                    </p>
+
+                </div>
+
+
+                <div class="panel table-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <div class="panel-title">
+                                Recovery Queue
+                            </div>
+
+                            <div class="panel-subtitle">
+                                AI-ranked opportunities for intervention
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Payment
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Method
+                                    </th>
+
+                                    <th>
+                                        Failure
+                                    </th>
+
+                                    <th>
+                                        Recovery Probability
+                                    </th>
+
+                                    <th>
+                                        Expected Value
+                                    </th>
+
+                                    <th>
+                                        Recommended Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="opportunities-table">
+
+                                <tr>
+
+                                    <td
+                                        colspan="7"
+                                        class="empty-state"
+                                    >
+                                        Loading opportunities...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 AGENT CONSOLE
+                 ================================================= -->
+
+            <section
+                id="page-agent"
+                class="page-section"
+            >
+
+                <div class="section-header">
+
+                    <h2>
+                        Agent Console
+                    </h2>
+
+                    <p>
+                        Run RecoveryOS against an individual failed payment
+                    </p>
+
+                </div>
+
+
+                <div class="agent-layout">
+
+
+                    <!-- LEFT: CONTROLS -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <div class="panel-title">
+                                    Recovery Agent
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    Controlled AI decision workflow
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="panel-body">
+
+
+                            <!-- PAYMENT INPUT -->
+
+                            <div class="input-group">
+
+                                <label
+                                    class="input-label"
+                                    for="payment-id"
+                                >
+                                    Payment ID
+                                </label>
+
+
+                                <div class="input-row">
+
+                                    <input
+                                        id="payment-id"
+                                        type="text"
+                                        placeholder="e.g. pay_00001"
+                                        autocomplete="off"
+                                    >
+
+
+                                    <button
+                                        id="run-agent"
+                                        class="primary-btn"
+                                        type="button"
+                                    >
+                                        Run Recovery
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- ERROR -->
+
+                            <div
+                                id="agent-error"
+                                class="error-box"
+                                role="alert"
+                                aria-live="polite"
+                            ></div>
+
+
+
+                            <!-- =================================================
+                                 SAFETY CONTROLS
+                                 ================================================= -->
+
+                            <div class="safety-box">
+
+                                <div class="safety-title">
+                                    Deterministic Safety Controls
+                                </div>
+
+
+                                <div class="safety-list">
+
+
+                                    <div class="safety-item">
+
+                                        <span>
+                                            Maximum automated retries
+                                        </span>
+
+                                        <span class="safety-check">
+                                            3
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <div class="safety-item">
+
+                                        <span>
+                                            High-value protection
+                                        </span>
+
+                                        <span class="safety-check">
+                                            ✓
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <div class="safety-item">
+
+                                        <span>
+                                            Low-confidence protection
+                                        </span>
+
+                                        <span class="safety-check">
+                                            ✓
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <div class="safety-item">
+
+                                        <span>
+                                            Failure-specific policy
+                                        </span>
+
+                                        <span class="safety-check">
+                                            ✓
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <div class="safety-item">
+
+                                        <span>
+                                            Human review fallback
+                                        </span>
+
+                                        <span class="safety-check">
+                                            ✓
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <div class="safety-item">
+
+                                        <span>
+                                            Real money movement
+                                        </span>
+
+                                        <span
+                                            style="
+                                                color:#72e2b4;
+                                            "
+                                        >
+                                            Disabled
+                                        </span>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- =================================================
+                                 RESULT
+                                 ================================================= -->
+
+                            <div
+                                id="agent-result"
+                                class="result-box"
+                            ></div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         RIGHT: EXECUTION TRACE
+                         ================================================= -->
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <div class="panel-title">
+                                    Agent Execution Trace
+                                </div>
+
+                                <div class="panel-subtitle">
+                                    Observe → Predict → Diagnose → Plan → Policy → Act → Verify → Audit
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            id="agent-trace"
+                            class="panel-body trace"
+                        >
+
+
+                            <div class="trace-step">
+
+                                <div class="trace-number">
+                                    1
+                                </div>
+
+                                <div class="trace-content">
+
+                                    <div class="trace-title">
+                                        Observe
+                                    </div>
+
+                                    <div class="trace-detail">
+                                        Load a failed payment and customer context.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="trace-step">
+
+                                <div class="trace-number">
+                                    2
+                                </div>
+
+                                <div class="trace-content">
+
+                                    <div class="trace-title">
+                                        Predict
+                                    </div>
+
+                                    <div class="trace-detail">
+                                        Estimate probability of successful recovery.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="trace-step">
+
+                                <div class="trace-number">
+                                    3
+                                </div>
+
+                                <div class="trace-content">
+
+                                    <div class="trace-title">
+                                        Diagnose
+                                    </div>
+
+                                    <div class="trace-detail">
+                                        Determine the likely reason for payment failure.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="trace-step">
+
+                                <div class="trace-number">
+                                    4
+                                </div>
+
+                                <div class="trace-content">
+
+                                    <div class="trace-title">
+                                        Plan
+                                    </div>
+
+                                    <div class="trace-detail">
+                                        Compare available recovery strategies.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="trace-step">
+
+                                <div class="trace-number">
+                                    5
+                                </div>
+
+                                <div class="trace-content">
+
+                                    <div class="trace-title">
+                                        Policy
+                                    </div>
+
+                                    <div class="trace-detail">
+                                        Apply deterministic safety and authorization rules.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="trace-step">
+
+                                <div class="trace-number">
+                                    6
+                                </div>
+
+                                <div class="trace-content">
+
+                                    <div class="trace-title">
+                                        Act
+                                    </div>
+
+                                    <div class="trace-detail">
+                                        Execute the approved recovery tool.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="trace-step">
+
+                                <div class="trace-number">
+                                    7
+                                </div>
+
+                                <div class="trace-content">
+
+                                    <div class="trace-title">
+                                        Verify
+                                    </div>
+
+                                    <div class="trace-detail">
+                                        Verify the tool execution result.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="trace-step">
+
+                                <div class="trace-number">
+                                    8
+                                </div>
+
+                                <div class="trace-content">
+
+                                    <div class="trace-title">
+                                        Audit
+                                    </div>
+
+                                    <div class="trace-detail">
+                                        Record the complete decision and outcome.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 AUDIT TRAIL
+                 ================================================= -->
+
+            <section
+                id="page-audit"
+                class="page-section"
+            >
+
+                <div class="section-header">
+
+                    <h2>
+                        Audit Trail
+                    </h2>
+
+                    <p>
+                        Transparent record of every agent decision and action
+                    </p>
+
+                </div>
+
+
+                <div class="panel table-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <div class="panel-title">
+                                Recovery Decisions
+                            </div>
+
+                            <div class="panel-subtitle">
+                                Agent actions, verification and status
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Audit ID
+                                    </th>
+
+                                    <th>
+                                        Payment
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Failure
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                    <th>
+                                        Execution
+                                    </th>
+
+                                    <th>
+                                        Verification
+                                    </th>
+
+                                    <th>
+                                        Timestamp
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="audit-table">
+
+                                <tr>
+
+                                    <td
+                                        colspan="8"
+                                        class="empty-state"
+                                    >
+                                        No audit events yet.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script src="/static/app.js?v=20260904"></script>
+
+</body>
+
+</html>

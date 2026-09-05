@@ -1,0 +1,211 @@
+{
+  "dataset_records": 10000,
+  "total_payment_value": 252308555.60000002,
+  "strategies": {
+    "Always Retry": {
+      "expected_recovery": 95914518.3198237,
+      "recovery_rate": 0.38014770482806287,
+      "actions": {
+        "DELAYED_RETRY": 7402,
+        "HUMAN_REVIEW": 2598
+      },
+      "by_failure": {
+        "LIMIT_EXCEEDED": {
+          "payments": 1475,
+          "expected_recovery": 9369928.27543399
+        },
+        "EXPIRED_CARD": {
+          "payments": 1394,
+          "expected_recovery": 10312216.170782004
+        },
+        "AUTH_FAILED": {
+          "payments": 1343,
+          "expected_recovery": 13451599.842900982
+        },
+        "INSUFFICIENT_FUNDS": {
+          "payments": 1467,
+          "expected_recovery": 9591652.841810018
+        },
+        "NETWORK_ERROR": {
+          "payments": 1443,
+          "expected_recovery": 19541348.36954201
+        },
+        "BANK_TIMEOUT": {
+          "payments": 1452,
+          "expected_recovery": 19578744.054828014
+        },
+        "BANK_DECLINED": {
+          "payments": 1426,
+          "expected_recovery": 14069028.764527012
+        }
+      },
+      "by_amount": {
+        "₹0–₹5K": {
+          "payments": 909,
+          "expected_recovery": 1028261.1661119995
+        },
+        "₹5K–₹10K": {
+          "payments": 1040,
+          "expected_recovery": 3112736.0234429967
+        },
+        "₹10K–₹25K": {
+          "payments": 2992,
+          "expected_recovery": 20789409.485151988
+        },
+        "₹25K–₹50K": {
+          "payments": 5059,
+          "expected_recovery": 70984111.64511697
+        },
+        "₹50K+": {
+          "payments": 0,
+          "expected_recovery": 0.0
+        }
+      }
+    },
+    "Rule Based": {
+      "expected_recovery": 132116778.44138385,
+      "recovery_rate": 0.5236317814400101,
+      "actions": {
+        "PAYMENT_LINK": 4249,
+        "HUMAN_REVIEW": 3587,
+        "DELAYED_RETRY": 2164
+      },
+      "by_failure": {
+        "LIMIT_EXCEEDED": {
+          "payments": 1475,
+          "expected_recovery": 17639571.004664022
+        },
+        "EXPIRED_CARD": {
+          "payments": 1394,
+          "expected_recovery": 18345189.937349014
+        },
+        "AUTH_FAILED": {
+          "payments": 1343,
+          "expected_recovery": 0.0
+        },
+        "INSUFFICIENT_FUNDS": {
+          "payments": 1467,
+          "expected_recovery": 17618755.75438199
+        },
+        "NETWORK_ERROR": {
+          "payments": 1443,
+          "expected_recovery": 27316033.692707982
+        },
+        "BANK_TIMEOUT": {
+          "payments": 1452,
+          "expected_recovery": 27849533.11907497
+        },
+        "BANK_DECLINED": {
+          "payments": 1426,
+          "expected_recovery": 23347694.933205985
+        }
+      },
+      "by_amount": {
+        "₹0–₹5K": {
+          "payments": 909,
+          "expected_recovery": 1392240.9718729982
+        },
+        "₹5K–₹10K": {
+          "payments": 1040,
+          "expected_recovery": 4266167.749768996
+        },
+        "₹10K–₹25K": {
+          "payments": 2992,
+          "expected_recovery": 29062869.74344399
+        },
+        "₹25K–₹50K": {
+          "payments": 5059,
+          "expected_recovery": 97395499.97629821
+        },
+        "₹50K+": {
+          "payments": 0,
+          "expected_recovery": 0.0
+        }
+      }
+    },
+    "RecoveryOS": {
+      "expected_recovery": 151639150.4994295,
+      "recovery_rate": 0.6010067718029831,
+      "actions": {
+        "PAYMENT_LINK": 7771,
+        "HUMAN_REVIEW": 759,
+        "DELAYED_RETRY": 1470
+      },
+      "by_failure": {
+        "LIMIT_EXCEEDED": {
+          "payments": 1475,
+          "expected_recovery": 18565830.467463996
+        },
+        "EXPIRED_CARD": {
+          "payments": 1394,
+          "expected_recovery": 19262808.956849005
+        },
+        "AUTH_FAILED": {
+          "payments": 1343,
+          "expected_recovery": 17714489.03119802
+        },
+        "INSUFFICIENT_FUNDS": {
+          "payments": 1467,
+          "expected_recovery": 18487140.05288198
+        },
+        "NETWORK_ERROR": {
+          "payments": 1443,
+          "expected_recovery": 26410957.12475502
+        },
+        "BANK_TIMEOUT": {
+          "payments": 1452,
+          "expected_recovery": 26938319.546074968
+        },
+        "BANK_DECLINED": {
+          "payments": 1426,
+          "expected_recovery": 24259605.32020599
+        }
+      },
+      "by_amount": {
+        "₹0–₹5K": {
+          "payments": 909,
+          "expected_recovery": 1595935.4611180008
+        },
+        "₹5K–₹10K": {
+          "payments": 1040,
+          "expected_recovery": 4964740.523213001
+        },
+        "₹10K–₹25K": {
+          "payments": 2992,
+          "expected_recovery": 33049244.66650904
+        },
+        "₹25K–₹50K": {
+          "payments": 5059,
+          "expected_recovery": 112029229.84858923
+        },
+        "₹50K+": {
+          "payments": 0,
+          "expected_recovery": 0.0
+        }
+      }
+    }
+  },
+  "recoveryos_improvement": {
+    "vs_always_retry": {
+      "incremental_expected_recovery": 55724632.1796058,
+      "relative_improvement": 0.580982244979784
+    },
+    "vs_rule_based": {
+      "incremental_expected_recovery": 19522372.05804564,
+      "relative_improvement": 0.1477660315998934
+    }
+  },
+  "safety": {
+    "retry_limit_blocks": 2598,
+    "high_value_cases": 0,
+    "low_confidence_escalations": 2572,
+    "unsafe_automated_retries": 0
+  },
+  "methodology": {
+    "type": "synthetic_counterfactual_simulation",
+    "note": "Expected recovery is simulated economic value, not observed revenue.",
+    "recoveryos_action_scoring": "ml.action_optimizer",
+    "policy": "backend.decision_engine",
+    "ml_predictions": "single_batch_model_inference"
+  }
+}
