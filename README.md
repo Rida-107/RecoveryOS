@@ -78,3 +78,13 @@ The LLM is **not authorized to move money directly**.
 # 🧠 Agent Workflow
 
 <img width="963" height="1600" alt="Image" src="https://github.com/user-attachments/assets/ae12afa1-c8aa-4251-9dc9-9708d9066fc4" />[](url)
+
+#VIDEO
+
+[
+
+https://github.com/user-attachments/assets/977c13a1-1644-4380-9fd6-10e1b402b8a5
+
+](url)
+
+
