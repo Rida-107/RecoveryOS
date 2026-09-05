@@ -77,34 +77,4 @@ The LLM is **not authorized to move money directly**.
 
 # 🧠 Agent Workflow
 
-```text
-                    FAILED PAYMENT
-                          │
-                          ▼
-                       OBSERVE
-                          │
-                          ▼
-                 ML RECOVERY PREDICTION
-                          │
-                          ▼
-                  LLM FAILURE DIAGNOSIS
-                          │
-                          ▼
-                   ACTION OPTIMIZER
-                          │
-                          ▼
-                DETERMINISTIC POLICY
-                          │
-             ┌────────────┼────────────┐
-             ▼            ▼            ▼
-       DELAYED RETRY  PAYMENT LINK  HUMAN REVIEW
-             │            │            │
-             └────────────┼────────────┘
-                          ▼
-                       ACT
-                          │
-                          ▼
-                      VERIFY
-                          │
-                          ▼
-                       AUDIT
+<img width="1225" height="917" alt="Image" src="https://github.com/user-attachments/assets/d6d6f647-fe03-4fb9-b290-737241e81a8e" />[](url)
